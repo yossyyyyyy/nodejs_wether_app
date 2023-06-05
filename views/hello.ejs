@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yossy Weather</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <h1>YOSSY WEATHER</h1>
+
+<form action="/weather" method="post">
+  <input type="text" name="city" placeholder="Enter city name" required>
+  <button type="submit">Get Weather</button>
+  
+</form>
+
+<% if (weather) { %>
+  <h1>The weather in <%= weather.city %> is <%= weather.weather %> now.<br>
+    The temperature is <%= weather.temperature %> degrees.</h1>
+<% } %>
+
+</body>
+</html>
+
+
+
